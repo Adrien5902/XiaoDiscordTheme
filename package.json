@@ -10,10 +10,10 @@
 	},
 	"description": "Xiao from Genshin Impact Theme for BetterDiscord",
 	"scripts": {
-		"build": "npm run build-style && npm run build-js",
-		"build-js": "mdkdir dist/plugin && cp src/plugin/plugin.js dist/plugin/plugin.js",
+		"build": "npm run build-style & npm run build-js",
+		"build-js": "mkdir dist/plugin & cp src/plugin/plugin.js dist/plugin/XiaoTheme.plugin.js",
 		"watch-js": "",
-		"build-style": "sass src/theme:dist/theme",
+		"build-style": "sass src/theme/theme.scss:dist/theme/Xiao.theme.css",
 		"watch-style": "sass --watch src/theme/theme.scss:%appdata%/BetterDiscord/themes/Xiao.theme.css"
 	},
 	"dependencies": {
