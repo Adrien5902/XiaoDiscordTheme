@@ -1,0 +1,113 @@
+/**
+ * @name Xiao Theme
+ * @author Adrien5902
+ * @description Xiao from genshin impact requested by Triiyx
+ * @version 0.0.1
+ */
+
+$xiao-green-0: #a7d7b0;
+$xiao-green-1: #337c82;
+$xiao-green-3: #2d595c;
+$xiao-green-4: #2d383a;
+$xiao-green-5: #001e19;
+$xiao-pink-1: #d69ccc;
+$xiao-pink-2: #8d64a8;
+$xiao-yellow-1: #ecc053;
+$xiao-yellow-2: #d3bc9d;
+$xiao-yellow-3: #fbf1f0;
+$xiao-red-1: #762223;
+
+$brand-hue: hue($xiao-pink-2);
+$brand-saturation: saturation($xiao-pink-2);
+$brand-lightness: lightness($xiao-pink-2);
+
+$green-hue: hue($xiao-green-0);
+$green-saturation: saturation($xiao-green-0);
+$green-lightness: lightness($xiao-green-0);
+
+* {
+    --shadow-1: #{rgba($xiao-green-5, 0.3)};
+    --shadow-2: #{rgba($xiao-green-5, 0.4)};
+    --shadow-3: #{rgba($xiao-green-5, 0.6)};
+    --shadow-4: #{rgba($xiao-green-5, 0.8)};
+    --shadow-5: #{rgba($xiao-green-5, 1)};
+
+    --red-400: #{$xiao-red-1} !important;
+    @for $i from 1 through 100 {
+        --blurple-#{$i}-hsl: #{$brand-hue} #{$brand-saturation} #{$brand-lightness} !important;
+        --opacity-blurple-#{$i}-hsl: #{$brand-hue} #{$brand-saturation} #{$brand-lightness} !important;
+        --green-new-#{$i}-hsl: #{$green-hue} #{$green-saturation} #{$green-lightness} !important;
+    }
+
+
+    /* Right bar */
+    --bg-base-secondary: var(--shadow-1) !important;
+    --background-floating: var(--shadow-3) !important;
+
+    /* Overall */
+    --bg-base-tertiary: rgba(0, 0, 0, 0) !important;
+    --background-tertiary: rgba(0, 0, 0, 0) !important;
+    --background-base-lowest: var(--shadow-2) !important;
+
+    /* Main chat */
+    --background-base-lower: transparent !important;
+
+    /* Bottom left infos */
+    --background-base-low: var(--shadow-3) !important;
+
+    --user-profile-overlay-background: var(--shadow-1) !important;
+    --background-surface-higher: var(--shadow-3) !important;
+    --background-surface-highest: var(--shadow-5) !important;
+
+    /* Type message bar */
+    --chat-background-default: var(--shadow-3) !important;
+
+    /* Activities */
+    --background-surface-high: var(--shadow-4) !important;
+
+    /* Settings and stuff */
+    --bg-base-primary: var(--shadow-1) !important;
+    --background-primary: var(--shadow-1) !important;
+    --background-secondary: var(--shadow-2) !important;
+
+    --scrollbar-thin-thumb: var(--xiao-green-3) !important;
+    --scrollbar-auto-thumb: var(--xiao-green-3) !important;
+
+    --black: var(--shadow-1) !important;
+}
+
+body {
+    /* background: linear-gradient(145deg, var(--xiao-green-3) 0%, var(--xiao-green-2) 19%, var(--xiao-green-1) 36%, var(--xiao-green-4) 64%, var(--xiao-yellow-1) 78%, var(--xiao-yellow-2) 87%, var(--xiao-yellow-3) 100%) !important; */
+    animation: infinite 1000ms test;
+}
+
+.callContainer_cb9592,
+.visual-refresh {
+    background-color: transparent !important;
+}
+
+.xiao_lantern {
+    position: fixed;
+    pointer-events: none;
+    opacity: 1;
+    z-index: -1;
+    bottom: -20%;
+    animation: lantern 25000ms;
+}
+
+@keyframes lantern {
+    0% {
+        bottom: -20%;
+    }
+
+    100% {
+        bottom: 120%;
+    }
+}
+
+.video_bg {
+    transform: scaleX(-1);
+    position: fixed;
+    z-index: -2;
+    pointer-events: none;
+}

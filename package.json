@@ -1,0 +1,22 @@
+{
+	"version": "0.0.1",
+	"author": {
+		"name": "Adrien5902",
+		"url": "https://github.com/Adrien5902"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Adrien5902/XiaoDiscordTheme"
+	},
+	"description": "Xiao from Genshin Impact Theme for BetterDiscord",
+	"scripts": {
+		"build": "npm run build-style && npm run build-js",
+		"build-js": "copy src/plugin/plugin.js dist/plugin/plugin.js",
+		"watch-js": "",
+		"build-style": "sass src/theme:dist/theme",
+		"watch-style": "sass --watch src/theme/theme.scss:%appdata%/BetterDiscord/themes/Xiao.theme.css"
+	},
+	"dependencies": {
+		"sass": "^1.88.0"
+	}
+}
