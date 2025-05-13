@@ -25,6 +25,9 @@ module.exports = class XiaoThemePlugin {
         videoBg.src = "https://v1.pinimg.com/videos/mc/720p/3c/84/0b/3c840b410668f170f82c0d57313ef87e.mp4"
         videoBg.width = window.innerWidth
         videoBg.classList.add("video_bg")
+        window.addEventListener("resize", () => {
+            videoBg.width = window.innerWidth
+        })
 
         if (!document.getElementById("xiao_logo")) {
             document.querySelector(".wrapper_cc5dd2 > svg").style.opacity = "0"
